@@ -1,10 +1,9 @@
-```markdown
 # Cell Classification Project
 
 This project performs segmentation, tracking, and classification on different types of cells.
 
 ## Project Structure
-```
+``` bash
 CellClassif/
 ├── data/
 │   ├── raw/                   # Raw images
