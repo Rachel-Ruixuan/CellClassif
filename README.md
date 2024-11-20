@@ -3,7 +3,7 @@
 ## Project Structure
 ```
 CellClassif/
-├── data/               # Data directory (not tracked by git)
+├── data/              # Data directory (not tracked by git)
 ├── src/               # Source code
 ├── configs/           # Configuration files
 └── notebooks/         # Jupyter notebooks
