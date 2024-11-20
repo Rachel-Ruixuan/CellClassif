@@ -118,5 +118,3 @@ python src/classification/train.py
   - FB/ADSC: (1224, 904)
 - Ensure correct image size configuration in relevant scripts
 - Check output directories for results and logs
-
-```
