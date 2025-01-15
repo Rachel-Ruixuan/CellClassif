@@ -502,7 +502,7 @@ def main():
             combined_features = pd.concat(all_features, ignore_index=True)
             
             # Save combined features
-            output_dir = os.path.join(base_dir, "data/processed/classification", cell_type)
+            output_dir = os.path.join(base_dir, "data/processed/motion", cell_type)
             os.makedirs(output_dir, exist_ok=True)
             combined_file = os.path.join(output_dir, 'all_features.csv')
             combined_features.to_csv(combined_file)

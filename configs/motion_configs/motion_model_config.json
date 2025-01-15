@@ -1,0 +1,9 @@
+{
+    "model": {
+        "input_dim": 15,
+        "num_classes": 4,
+        "hidden_dims": [128, 64, 32],
+        "dropout_rate": 0.5,
+        "weights_path": "/scratch/rl4789/CellClassif/src/motion/best_motion_model.pth"
+    }
+}

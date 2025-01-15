@@ -9,6 +9,8 @@ data/interim/
 *.pt
 models/
 *.onnx
+results/
+inference_results/
 
 # Python
 __pycache__/

@@ -1,0 +1,40 @@
+# mixed_detectron_config.yaml
+
+MODEL:
+  WEIGHTS: "detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl"
+  MASK_ON: True
+  ROI_HEADS:
+    NUM_CLASSES: 4  # Update to the number of cell types
+    BATCH_SIZE_PER_IMAGE: 128
+  DEVICE: "cuda"
+
+DATASETS:
+  TRAIN: ("cell_train",)  # Combined training dataset
+  TEST: ("cell_val",)     # Combined validation dataset
+
+DATALOADER:
+  NUM_WORKERS: 4  # Adjust based on your system
+
+SOLVER:
+  IMS_PER_BATCH: 4  # Increased batch size for multiple classes
+  BASE_LR: 0.0005   # Lower learning rate for stability
+  MAX_ITER: 30000   # Increased iterations for better convergence
+  STEPS: (20000, 25000)  # Learning rate decay steps
+  CHECKPOINT_PERIOD: 1000
+
+INPUT:
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+  MAX_SIZE_TRAIN: 1333
+  MIN_SIZE_TEST: 800
+  MAX_SIZE_TEST: 1333
+
+MODEL:
+  ROI_HEADS:
+    SCORE_THRESH_TEST: 0.7    # Increased confidence threshold
+    NMS_THRESH_TEST: 0.3      # Non-Maximum Suppression threshold
+
+TEST:
+  EVAL_PERIOD: 5000  # Evaluate every 5000 iterations
+
+OUTPUT_DIR: "/scratch/rl4789/CellClassif/models/mixed_detectron"
+VERSION: 2
