@@ -231,9 +231,10 @@ python src/inference/phase3_integrated.py
 
 
 ## Results
-![Inference Video](path_to_video_thumbnail)
+![Inference Video](https://raw.githubusercontent.com/Rachel-Ruixuan/CellClassif/main/inference_results/100MDA_4034_inference_20241230_020032/Screenshot.png)
 
-Watch the [inference video](link_to_video) to see the model in action.
+Watch the [inference video](https://raw.githubusercontent.com/Rachel-Ruixuan/CellClassif/main/inference_results/100MDA_4034_inference_20241230_020032/100MDA_4034_annotated_20241230_020214.mp4) to see the model in action.
+
 
 ## Progress Overview
 - ### Current Status
